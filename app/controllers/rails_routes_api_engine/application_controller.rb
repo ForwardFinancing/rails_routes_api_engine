@@ -1,5 +1,6 @@
 module RailsRoutesApiEngine
-  class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exception
+  # The engine's application controller extends the consumers base controller
+  class ApplicationController < ::ApplicationController
+
   end
 end

@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsRoutesApiEngine::VERSION
   s.authors     = ["zcotter@forwardfinancing.com"]
   s.email       = ["jaffecotter.z@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsRoutesApiEngine."
-  s.description = "TODO: Description of RailsRoutesApiEngine."
+  s.homepage    = "https://github.com/ForwardFinancing/rails_routes_api_engine"
+  s.summary     = "Exposes your Rails app's routes via an API endpoint"
+  s.description = "Exposes your Rails app's routes via an API endpoint"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
