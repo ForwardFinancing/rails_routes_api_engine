@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  mount RailsRoutesApiEngine::Engine => "/rails_routes_api_engine"
+  mount RailsRoutesApiEngine::Engine => "/"
+
   resources :some do
     member do
       get :some_custom_action
