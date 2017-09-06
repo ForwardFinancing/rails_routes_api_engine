@@ -4,7 +4,7 @@
 
 [![Issue Count](https://codeclimate.com/github/ForwardFinancing/rails_routes_api_engine/badges/issue_count.svg)](https://codeclimate.com/github/ForwardFinancing/rails_routes_api_engine)
 
-[![Build Status](https://travis-ci.org/ForwardFinancing/rails_routes_api_engine.svg?branch=playbook)](https://travis-ci.org/ForwardFinancing/rails_routes_api_engine)
+[![Build Status](https://travis-ci.org/ForwardFinancing/rails_routes_api_engine.svg?branch=master)](https://travis-ci.org/ForwardFinancing/rails_routes_api_engine)
 
 
 # RailsRoutesApiEngine
