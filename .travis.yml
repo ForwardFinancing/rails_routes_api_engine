@@ -1,0 +1,10 @@
+language: ruby
+script:
+- bundle exec rake test
+- bundle exec codeclimate-test-reporter
+before_install:
+- export TZ=US/Eastern
+- export CODECLIMATE_REPO_TOKEN=8e517d947bc898ac18424788e6342ac7db15bdb91b704978a9b783384425d113
+- date
+notifications:
+  email: false

@@ -1,0 +1,24 @@
+prepare:
+  fetch:
+    - url: "https://raw.githubusercontent.com/ForwardFinancing/code_styles/master/rubocop.yml"
+      path: ".rubocop.yml"
+engines:
+  brakeman:
+    enabled: true
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+    file: ".rubocop.yml"
+    channel: rubocop-0-48
+  duplication:
+    enabled: true
+    config:
+      languages:
+        ruby:
+          mass_threshold: 20
+ratings:
+  paths:
+    - "**.rb"
+exclude_paths:
+- "test"

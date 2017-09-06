@@ -1,6 +1,12 @@
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 
+require 'codeclimate-test-reporter'
+SimpleCov.minimum_coverage 100
+SimpleCov.start do
+  add_filter '/test'
+end
+
 require File.expand_path("../../test/dummy/config/environment.rb", __FILE__)
 ActiveRecord::Migrator.migrations_paths = [File.expand_path("../../test/dummy/db/migrate", __FILE__)]
 ActiveRecord::Migrator.migrations_paths << File.expand_path('../../db/migrate', __FILE__)

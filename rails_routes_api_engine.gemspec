@@ -1,4 +1,4 @@
-$:.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
 require "rails_routes_api_engine/version"
@@ -14,9 +14,16 @@ Gem::Specification.new do |s|
   s.description = "Exposes your Rails app's routes via an API endpoint"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir[
+    "{app,config,db,lib}/**/*",
+    "MIT-LICENSE",
+    "Rakefile",
+    "README.md"
+  ]
 
   s.add_dependency "rails", ">= 3"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'codeclimate-test-reporter'
+  s.add_development_dependency 'simplecov'
 end
