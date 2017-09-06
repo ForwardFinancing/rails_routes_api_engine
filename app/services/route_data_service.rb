@@ -13,8 +13,6 @@ module RouteDataService
         action: route.defaults[:action],
         controller: route.defaults[:controller]
       }
-    end.select do |route_data|
-      route_data.values.map(&:present?).all?
     end
   end
 end
