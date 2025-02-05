@@ -5,14 +5,31 @@
 #     - controller
 module RouteDataService
   def self.get_routes_data
-    Rails.application.routes.routes.select do |route|
+    main_app_routes = format_routes(Rails.application.routes.routes)
+
+    engines = RailsRoutesApiEngine.configuration.engines || []
+    engines_routes = engines.map do |engine|
+      format_routes(engine::Engine.routes.routes, engine)
+    end.flatten
+
+    main_app_routes + engines_routes
+  end
+
+  def self.format_routes(routes, engine = nil)
+    routes.select do |route|
       !route.defaults[:internal]
     end.map do |route|
       {
-        path: route.path.spec.to_s,
+        path: "#{engine_route_prefix(engine)}#{route.path.spec.to_s}",
         action: route.defaults[:action],
         controller: route.defaults[:controller]
       }
     end
+  end
+
+  def self.engine_route_prefix(engine)
+    return "" unless engine
+
+    "/#{engine.to_s.underscore}"
   end
 end
