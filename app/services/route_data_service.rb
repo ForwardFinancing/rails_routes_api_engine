@@ -8,9 +8,9 @@ module RouteDataService
     main_app_routes = format_routes(Rails.application.routes.routes)
 
     engines = RailsRoutesApiEngine.configuration.engines || []
-    engines_routes = engines.map do |engine|
+    engines_routes = engines.flat_map do |engine|
       format_routes(engine::Engine.routes.routes, engine)
-    end.flatten
+    end
 
     main_app_routes + engines_routes
   end
