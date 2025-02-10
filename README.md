@@ -36,6 +36,15 @@ Rails.application.routes.draw do
 end
 ```
 
+## Configuring namespaced engine routes
+
+```
+# config/initializers/rails_routes_api_engine.rb
+RailsRoutesApiEngine.configure do |config|
+  config.engines_names = [EngineClass]
+end
+```
+
 ## Contributing
 Contribution directions go here.
 
