@@ -110,16 +110,6 @@ class ActiveSupport::TestCase
       :controller => "another"
     },
     {
-      :path=>"/assets",
-      :action=>nil,
-      :controller=>nil
-    },
-    {
-      :path=>"/cable",
-      :action=>nil,
-      :controller=>nil
-    },
-    {
       :path=>"/",
       :action=>nil,
       :controller=>nil
