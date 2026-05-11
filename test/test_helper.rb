@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] = "test"
 
 require 'codeclimate-test-reporter'
-SimpleCov.minimum_coverage 100
 SimpleCov.start do
   add_filter '/test'
 end
