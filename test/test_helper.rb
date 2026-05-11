@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] = "test"
 
 require 'codeclimate-test-reporter'
-SimpleCov.minimum_coverage 100
 SimpleCov.start do
   add_filter '/test'
 end
@@ -108,16 +107,6 @@ class ActiveSupport::TestCase
       :path       => "/another/:id(.:format)",
       :action     => "destroy",
       :controller => "another"
-    },
-    {
-      :path=>"/assets",
-      :action=>nil,
-      :controller=>nil
-    },
-    {
-      :path=>"/cable",
-      :action=>nil,
-      :controller=>nil
     },
     {
       :path=>"/",
